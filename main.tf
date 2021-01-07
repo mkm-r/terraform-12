@@ -27,7 +27,7 @@ resource "random_id" "name" {
 
 resource "helm_release" "test" {
   name      = "test-chart${random_id.name.hex}"
-  repository = "https://kubernetes-charts.storage.googleapis.com"
+  repository = "https://charts.bitnami.com/bitnami"
   chart      = "redis"
   version    = "6.0.1"
   wait       = false
